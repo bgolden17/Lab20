@@ -1,0 +1,38 @@
+-- 1
+select * from customers;
+-- 2
+select distinct country from customers;
+-- 3
+select * from customers where customerID like 'BL%';
+-- 4
+select * from orders limit 100;
+-- 5
+select * from customers where PostalCode in ('1010', '3012', '12209', '05023')
+-- 6
+select * from orders where ShipRegion is not null;
+-- 7
+select * from customers order by Country, City;
+-- 8
+
+-- 9
+
+-- 10
+delete from 'order details' where quantity = 1;
+-- 11
+select min(quantity), max(quantity), avg(quantity) from 'order details';
+-- 12
+select OrderID, min(quantity), max(quantity), avg(quantity) from 'order details';
+-- 13
+
+-- 14
+select * from orders
+join employees
+on employees.employeeID = orders.EmployeeID
+where employee.City = 'London';
+-- 15
+
+-- 16
+
+-- 17
+
+-- 18
